@@ -1,0 +1,459 @@
+
+  /*  Clock style & Animation */
+  .clockContainer{
+      position: absolute;
+    top: 20px;
+    left: 2%;
+    margin: auto 0;
+    width: 130px;
+    height: 130px;
+    border: 1px solid transparent;
+  }
+  
+  .clockOut{
+    width: 80%;
+    height: 80%;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom:0;
+    margin-left: auto; margin-right: auto; left:0; right:0;
+  }
+  
+  .clockTop{
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    width: 40px;
+    top: 18px;
+    position: absolute;
+    margin-left: auto; 
+    margin-right: auto; 
+    height: 28px;
+    border-radius: 5px;
+  }
+  
+  .clockTop.left {
+    left:7px;
+    -ms-transform:rotate(-40deg); 
+    -webkit-transform:rotate(-40deg);
+    transform:rotate(-40deg);
+  }
+  
+  .clockTop.right {
+    right:7px;
+    -ms-transform:rotate(40deg); 
+    -webkit-transform:rotate(40deg);
+    transform:rotate(40deg);
+  }
+  
+  .soundWave {
+    top: -5px;
+    position: absolute;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  .soundWave.left {
+    left: -7px;
+    -ms-transform:rotate(-40deg); 
+    -webkit-transform:rotate(-40deg);
+    transform:rotate(-40deg);
+  }
+  
+  .soundWave.right {
+    right: -7px;
+    -ms-transform:rotate(40deg); 
+    -webkit-transform:rotate(40deg);
+    transform:rotate(40deg);
+  }
+  
+  .soundWave div {
+    border-top: 2px solid white;
+    border-radius: 100%;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  .soundWave .wave1 {
+    width: 30px; 
+    height: 30px;
+    margin-top: -10px;  
+  }
+  
+  .soundWave .wave2 {
+    width: 20px; 
+    height: 20px; 
+    margin-top: -20px;
+  }
+  
+  .soundWave .wave3 {
+    width: 10px; 
+    height: 10px; 
+    margin-top: -10px;
+  }
+  
+  .clockBell{
+    border: 2px solid white;
+    width: 20px; 
+    height: 10px;
+    position: absolute;
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 5px;
+    right: 0;
+    left: 0px;
+    top: -1px;
+    transform-origin:50% 200%;
+    -webkit-transform-origin:50% 200%;
+    -webkit-animation: bellAnimation .25s ease-in-out 0s infinite alternate; 
+    animation: bellAnimation .25s ease-in-out 0s infinite alternate;
+  }
+  
+  .bellArm {
+    border-right: 2px solid #ffffff;
+    position: absolute;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 2px;
+    height: 15px;
+    top: 10px;
+    left:0;
+    right: 0;
+  }
+  
+  .clockLeg {
+    width: 25px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 100%;
+  }
+  
+  .clockLeg.left {
+    left: 15%;
+    -ms-transform:rotate(-60deg); 
+    -webkit-transform:rotate(-60deg);
+    transform:rotate(-60deg);
+  }
+  
+  .clockLeg.right {
+    left: 68%;
+    -ms-transform:rotate(60deg); 
+    -webkit-transform:rotate(60deg);
+    transform:rotate(60deg);
+  }
+  
+  .marker {
+    width: 2px;
+    height: 88px;
+    position: absolute;
+    left: 50%
+  }
+  
+  .marker.large {
+    top: 6px;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+  }
+  
+  .marker.small {
+    top: 10px;
+    border-top: 7px solid white;
+    border-bottom: 7px solid white;
+  }
+  
+  .marker.oneseven {
+    -ms-transform:rotate(30deg); 
+    -webkit-transform:rotate(30deg);
+    transform:rotate(30deg);
+  }
+  
+  .marker.twoeight {
+    -ms-transform:rotate(60deg); 
+    -webkit-transform:rotate(60deg);
+    transform:rotate(60deg);
+  }
+  
+  .marker.threenine {
+    -ms-transform:rotate(90deg); 
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+  }
+  
+  .marker.fourten {
+    -ms-transform:rotate(120deg); 
+    -webkit-transform:rotate(120deg);
+    transform:rotate(120deg);
+  }
+  
+  .marker.fiveeleven {
+    -ms-transform:rotate(150deg); 
+    -webkit-transform:rotate(150deg);
+    transform:rotate(1590deg);
+  }
+  
+  .clockSecondNeedle{
+    width: 50px;
+    height: 0.09px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform-origin:100% 50%;
+    -webkit-transform-origin:100% 50%;
+    -webkit-animation: needleAnimation 3s linear 0s infinite; 
+    animation: needleAnimation 3s linear 0s infinite;
+  }
+  
+  .clockMinuteNeedle{
+    width: 40px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform-origin:100% 50%;
+    -webkit-transform-origin:100% 50%;
+    -webkit-animation: needleAnimation 90s linear 0s infinite; 
+    animation: needleAnimation 90s linear 0s infinite;
+  }
+  
+  /*  keyframes for needle & bell animation*/
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes needleAnimation {
+      from {
+          
+      }
+      to {
+          -ms-transform:rotate(360deg); 
+          -ms-transform:rotate(360deg); 
+          -webkit-transform:rotate(360deg); 
+      }
+  }
+  
+  /* Standard syntax */
+  @keyframes needleAnimation {
+     from {
+          
+      }
+      to {
+          -ms-transform:rotate(360deg); 
+          -ms-transform:rotate(360deg); 
+          -webkit-transform:rotate(360deg); 
+      }
+  }
+  
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes bellAnimation {
+      from {
+        -ms-transform:rotate(-60deg); 
+        -webkit-transform:rotate(-60deg);
+        transform:rotate(-60deg);
+      }
+      to {
+          -ms-transform:rotate(60deg); 
+        -webkit-transform:rotate(60deg);
+        transform:rotate(60deg);
+        
+      }
+  }
+  
+  /* Standard syntax */
+  @keyframes bellAnimation {
+     from {
+        -ms-transform:rotate(-60deg); 
+        -webkit-transform:rotate(-60deg);
+        transform:rotate(-60deg);
+      }
+      to {
+        
+          -ms-transform:rotate(60deg); 
+        -webkit-transform:rotate(60deg);
+        transform:rotate(60deg);
+      }
+  }
+  
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes soundAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+  }
+  
+  /* Standard syntax */
+  @keyframes soundAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+  }
+
+
+  /*  Default box sizing */
+* {
+	box-sizing: border-box;
+}
+
+html {
+    padding-top:50px;
+}
+
+ /*  Default Select tag style */
+select{
+    width: 43px;
+    height: 35px;
+    color: black;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+/*  Default body tag style */
+body {
+    border: 8px solid #10A8EB;
+    border-radius: 20px;
+    padding: 40px;
+    width: 60%;
+    height: 400px;
+    margin: 7% auto;
+    background-color: #00002A;
+}
+
+#clock {
+    height:120px;
+    font-size: 40px;
+    font-family: arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  color: white;
+}
+
+h2 {
+	text-align:center;
+
+}
+/*  Alarm clock styles */
+#alarm-container {
+	text-align:center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+  color: white;
+}
+
+label {
+	display:inline-block;
+}
+
+.timeofday {
+    background-color: #eee;
+}
+
+.bigger {
+    font-weight:bold;
+    font-size: 18px;
+}
+
+#sounds {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#setButton {
+    float:left;
+    background-color:#10A8EB;
+    margin-top:10px;
+}
+#clearButton {
+    float:right;
+    background-color:red;
+    margin-top:10px;
+}
+
+/*  Button style */
+button{
+    height: 35px;
+    width: 110px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+}
+h3{
+    font-size: 20px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #EB5310;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #EB5310;
+  color: white;
+}

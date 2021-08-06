@@ -1,0 +1,115 @@
+
+<html>
+	<head>
+		<title>Alarm Clock</title>
+		<meta charset='UFT-8' name='viewport' content='width=device-width, initial=scale=1.0' >
+		<link rel='stylesheet' type='text/css' href='main.css'>
+		<link rel="icon" href="alam.png" type="image" >
+	</head>
+	<body id="body">
+		<!--Clock On the left hand side with animations -->
+
+		<!--Main Clock container -->
+        <div class="clockContainer">
+			<!-- Sound wave on left -->
+            <div class="soundWave left">
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+                <div class="wave3"></div>
+            </div>
+			<!-- sound wave on right -->
+            <div class="soundWave right">
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+                <div class="wave3"></div>
+            </div>
+            <div class="clockTop left"></div>
+            <div class="clockTop right"></div>
+            <div class="clockBell">
+              <div class="bellArm"></div>
+            </div>
+            <div class='clockOut'>
+              <div class="marker large twelvesix"></div>
+              <div class="marker small oneseven"></div>
+              <div class="marker small twoeight"></div>
+              <div class="marker large threenine"></div>
+              <div class="marker small fourten"></div>
+              <div class="marker small fiveeleven"></div>
+              <div class="clockMinuteNeedle"></div>
+              <div class="clockSecondNeedle"></div>
+            </div>
+			<!-- clock legs -->
+            <div class="clockLeg left"></div>
+            <div class="clockLeg right"></div>
+          </div>
+		<div id='main-container'>
+			<h2 style="font-size: 60px;" id='clock'></h2>
+		</div>
+		<!--Main functionalities of the alarm clock -->
+		<div style="position: relative; top: -30px;" id='alarm-container'>
+			<h3>Set Alarm Time</h3>
+				<label>
+					<div>
+					<select id='alarmhrs' ></select>
+					</div>
+				</label>
+				<label>
+					<div>
+					<select id='alarmmins' ></select>
+					</div>
+				</label>
+				<label>
+					<div>
+					<select id='alarmsecs' ></select>
+					</div>
+				</label>
+				<label>
+					<div>
+						<select id="ampm">
+							<option value="AM">AM</option>
+							<option value="PM">PM</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<!-- Buttons for creating and deleting alarm -->
+		<div id='buttonHolder'>
+			<div>
+				<button  id='setButton' onClick='alarmSet()'>Set Alarm</button>
+			</div>
+
+			<div>
+				<button  id='clearButton' onClick='alarmClear()'>Delete Alarm</button>
+			</div>
+		</div>
+		<!-- Alarm Notification -->
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div style="border-radius: 7px;" class="modal-content">
+			  <div class="modal-header" style="border-radius: 7px;">
+				<span class="close">&times;</span>
+				<h2>Alarm Notification</h2>
+			  </div>
+			  <div class="modal-body" style="border-radius: 7px;">
+				
+				<p style="text-align: center;">Alarm Is Ringing.</p>
+			  </div>
+			  <div class="modal-footer" style="border-radius: 7px;">
+				<p style="text-align: center;">Click On Delete Button To Set The Alarm Off</p>
+			  </div>
+			</div>
+		  
+		  </div>
+		<script type='text/javascript' src='index.js'></script>
+		<script>
+			
+			
+			/* Background GIF*/
+			document.body.style.backgroundImage = "url('3.gif')";
+
+			document.body.style.backgroundSize = "cover";
+		</script>
+	</body>
+</html>
