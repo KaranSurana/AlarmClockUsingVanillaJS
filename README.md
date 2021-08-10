@@ -8,4 +8,4 @@
 
 <img src="preview.PNG">
 
-➼ For Preview Click Here.
+➼ For Preview Click <a href="https://karansurana.github.io/AlarmClockUsingVanillaJS/">Here.</a>
