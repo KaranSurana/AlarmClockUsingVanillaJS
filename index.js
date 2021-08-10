@@ -119,7 +119,10 @@ setInterval(function(){
 
 var date = new Date();
 
-var hours = (12 - (date.getHours()));
+var hours = date.getHours();
+if(date.getHours()>12){
+    var hours = (12 - (date.getHours()));
+}
 
 
 var minutes = date.getMinutes();
